@@ -57,6 +57,8 @@ Once I have achieved the initial functionality and come up with suitable tests I
 
 
 ## Lessons learned
+* Initially I wanted to break this down into steps to emphasize the readability requirement but to do so require creating all the extra Lists as in my first impl. I decided that it really didn't make things easier to understand than the single stream method especially considering the extra memory used.
+* Initially I thought I may want to set things up for the potential future use of the Department and Status as filter criteria but this could easily wind up being technical debt so, I abandoned this as YAGNI.
 
 ---
 

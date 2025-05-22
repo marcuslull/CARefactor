@@ -1,0 +1,119 @@
+{
+  "2023_AllGood_Alice_Normal": {
+    "Wonderland_Branch_Alpha": {
+      "branchName": "Wonderland Branch Alpha",
+      "specialty": "Sales",
+      "employees": [
+        {
+          "name": "Alice Wonderland",
+          "status": "Tenured",
+          "department": "Sales",
+          "productivity": 70
+        },
+        {
+          "name": "Bob The Builder",
+          "productivity": 60
+        }
+      ]
+    }
+  },
+  "2024_YearValueIsNull": null,
+  "2025_BranchLevelTests_Alice_Max": {
+    "BranchA_Alice_HighestProd": {
+      "branchName": "Branch A Alice Highest Prod",
+      "employees": [
+        {
+          "name": "Alice Wonderland",
+          "productivity": 85
+        }
+      ]
+    },
+    "BranchB_BranchObjectIsNull": null,
+    "BranchC_EmployeesListIsNull": {
+      "branchName": "Branch C Employees List Is Null",
+      "specialty": "IT",
+      "employees": null
+    },
+    "BranchD_EmployeesListIsEmpty": {
+      "branchName": "Branch D Employees List Is Empty",
+      "employees": []
+    },
+    "BranchE_AliceProdIsNull": {
+      "branchName": "Branch E Alice Prod Is Null",
+      "employees": [
+        {
+          "name": "Alice Wonderland",
+          "productivity": null
+        }
+      ]
+    }
+  },
+  "2026_EmployeeLevelTests_Alice_Various": {
+    "Branch_EmployeeVariations": {
+      "branchName": "Employee Variations Branch",
+      "employees": [
+        {
+          "name": "Alice Wonderland",
+          "status": "New",
+          "productivity": 50
+        },
+        {
+          "name": "Charlie_ProductivityIsNull",
+          "department": "HR",
+          "productivity": null
+        },
+        {
+          "name": "David_ProductivityFieldMissing"
+        },
+        {
+          "name": null,
+          "productivity": 90
+        },
+        null,
+        {
+          "name": "Alice Wonderland",
+          "department": "Sales"
+        },
+        {
+          "name": "Eve_OtherEmployee",
+          "productivity": 77
+        }
+      ]
+    }
+  },
+  "2027_Alice_AllProductivityNullOrMissing": {
+    "Branch_AliceAllNullProd": {
+      "branchName": "Alice All Null Prod Branch",
+      "employees": [
+        {
+          "name": "Alice Wonderland",
+          "productivity": null
+        },
+        {
+          "name": "Alice Wonderland"
+        }
+      ]
+    }
+  },
+  "2028_Year_NoAliceEmployee": {
+    "Branch_NoAliceHere": {
+      "branchName": "No Alice Here Branch",
+      "employees": [
+        {
+          "name": "Bob The Builder",
+          "productivity": 65
+        },
+        {
+          "name": "Diana The Developer",
+          "productivity": 92
+        }
+      ]
+    }
+  },
+  "2029_Year_EmptyBranchMap": {
+  },
+  "2030_Year_BranchesAreAllNull": {
+    "BranchX_IsNull": null,
+    "BranchY_IsNull": null
+  }
+}
