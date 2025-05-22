@@ -1,4 +1,4 @@
-# Refactor Homework
+# Refactor Homework  
 Technical interview homework problem two  
 Completed by Marcus Lull
 ---
@@ -29,11 +29,32 @@ See below
 * Use functional programming where possible (Streams, Optionals)
 * Graded against an unknown test suite
 * The original method passes the unknown tests
+* Assumption: The client may want the ability to filter based on existing enums, or branch names in the future.
 
 ## Current code review
+ * This code parses a data structure that contains employee data partitioned by branch and then by year. 
+ * Data is searched for an employee name that matches the employee name that was passed as an argument.
+ * On a match, it checks productivity and updates bestProductivity based on a comparison between current and previous max.
+ * Employees may have multiple entries because of data partitioning
+ * The current hierarchy is: String year > Branch branch > Employee employee > Integer productivity.
+ * Null checks at each level
+ * Employee matched based on name
+ * Method returns null by default
+ * Method returns an Integer max productivity only if an employee is found that matches the employeeName argument and has a productivity score
+ * Current logic does not seem to rely on Branch.department, Employee.department, Employee.status.
 
 
 ## My technical choices
+One of the requirements of this refactoring is readability. Java Streams make a great choice for this aspect as they are intuitively more easy to read in a step-by-step manner.  
+
+Java Maps do not natively have access to the `.stream()` method like Java Collections do. However, adapting Maps to the Stream API can be done using the `keySet()`, `values()`, or `entrySet()` methods.  
+
+For this particular problem it looks like we are only returning the best productivity score for a given employee. This productivity field is held by the Employee object which is contained in a List field of the Branch object. Branches are the values of the inner Map which is itself the value of the outer year Map. So, at least initially it looks like we can drill down to individual Branches with `Map.values()` and the key data will not be needed. From this point we may only require a `filter()` to collect all employee records where we can decide the max perhaps with a max function.  
+
+As far as null handling and validation this can be handled with optionals and a combination of `if/isPresent()`, and `orElse()` functions.
+
+Once I have achieved the initial functionality and come up with suitable tests I can refactor for optimization and maintainability.
+
 
 ## Lessons learned
 
